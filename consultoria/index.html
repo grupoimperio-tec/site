@@ -103,6 +103,17 @@ details p{margin-top:8px;color:var(--tx2);font-size:15px}
 .fim{text-align:center;align-items:center}
 .fim p{color:var(--tx2);max-width:30em}
 footer{text-align:center;color:var(--mut);font-size:12.5px}
+.programa{border:1.5px solid var(--ouro);border-radius:18px;padding:26px;display:flex;flex-direction:column;gap:18px;background:var(--sup)}
+.dias{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.dia{border-top:2px solid var(--ouro);padding-top:10px}
+.dia .q{font-family:var(--num);font-size:22px;color:var(--ouro);letter-spacing:.02em}
+.dia b{display:block;font-size:15.5px;margin:2px 0}
+.dia p{font-size:14px;color:var(--tx2)}
+.circulo{display:grid;grid-template-columns:1fr auto;gap:12px 24px;align-items:center;border-top:1px dashed var(--linha);padding-top:16px}
+.circulo p{font-size:14.5px;color:var(--tx2)}
+.circulo .pr{text-align:right;white-space:nowrap}
+.circulo .pr b{font-family:var(--num);font-size:30px;color:var(--ouro);font-weight:400}
+@media (max-width:640px){.dias{grid-template-columns:1fr}.circulo{grid-template-columns:1fr}.circulo .pr{text-align:left}}
 .cal{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
 .cal div{border-top:2px solid var(--ouro3);padding-top:8px;font-size:13.5px;color:var(--tx2)}
 .cal b{display:block;color:var(--tx);font-size:15px}
@@ -129,7 +140,7 @@ footer{text-align:center;color:var(--mut);font-size:12.5px}
       <a class="btn" id="cta1" href="https://chat.whatsapp.com/INHuilBjIyi6ZJvBAdgOVB" target="_blank" rel="noopener">Entrar na lista de fundadores</a>
       <a class="btn sec" href="#como">Como funciona</a>
     </div>
-    <p class="nota">Quem entra na lista de fundadores ganha o diagnóstico gratuito: 30 nesta semana, por ordem de entrada. Nunca pedimos sua senha.</p>
+    <p class="nota">Na lista de fundadores: diagnóstico gratuito do seu perfil e conteúdo toda semana. Nunca pedimos sua senha.</p>
   </header>
 
   <article class="ficha" aria-label="Exemplo de diagnóstico">
@@ -145,6 +156,22 @@ footer{text-align:center;color:var(--mut);font-size:12.5px}
       </ul>
     </div>
   </article>
+
+  <section class="programa" aria-label="O que você recebe na lista de fundadores">
+    <span class="eyebrow">Na lista de fundadores, toda semana</span>
+    <h2>Não é só uma vaga. <em>É conteúdo toda semana.</em></h2>
+    <div class="dias">
+      <div class="dia"><span class="q">SEGUNDA</span><b>Raio-X do Setor</b><p>Um setor por semana: quem está contratando, que competências aparecem nas vagas e como os perfis fortes se posicionam. Começa por Finanças e meios de pagamento.</p></div>
+      <div class="dia"><span class="q">QUARTA</span><b>Raio-X de Perfil</b><p>Análise de um perfil público de executivo: o que funciona, o que mudaríamos e por quê. Educativo, sem foto, nunca de cliente.</p></div>
+      <div class="dia"><span class="q">SEXTA</span><b>Modelo da Semana</b><p>Uma peça pronta para adaptar ao seu perfil: título, "Sobre" ou post. Para usar no mesmo dia.</p></div>
+    </div>
+    <p class="nota">E mais: diagnóstico gratuito do seu perfil (30 por semana, por ordem de entrada).</p>
+    <div class="circulo">
+      <p><b style="color:var(--tx)">Depois da lista, o Círculo Executivo.</b> O grupo continua: os conteúdos semanais mais aprofundados, revisão de 1 post seu por mês e alertas quando o seu setor mexer. Quem contrata o reposicionamento ganha 3 meses.</p>
+      <div class="pr"><b>R$ 29</b>/mês<br><span class="nota">para fundadores · depois R$ 49</span></div>
+    </div>
+    <div class="ctas"><a class="btn" href="https://chat.whatsapp.com/INHuilBjIyi6ZJvBAdgOVB" target="_blank" rel="noopener">Entrar na lista de fundadores</a></div>
+  </section>
 
   <section>
     <span class="eyebrow">O problema</span>
