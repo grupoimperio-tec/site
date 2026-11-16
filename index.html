@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="pt-BR"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Grupo Império</title>
+<meta name="description" content="Grupo Império: consultoria de LinkedIn executivo e curadoria de ofertas com comparação de preço entre Mercado Livre, Amazon e Shopee.">
+<meta property="og:title" content="Grupo Império">
+<meta property="og:description" content="Consultoria de LinkedIn executivo e curadoria de ofertas com comparação de preço entre lojas.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://grupoimperio.tec.br/">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Fraunces:opsz,wght@9..144,600&family=Poppins:wght@400;500;600;700&display=swap">
+<style>
+:root{
+  --onix:#0c0b09; --carvao:#1a1712; --linha:#3a3226; --ouro:#e2b13c; --ouro2:#f7d680; --ouro3:#966e1e;
+  --marfim:#f6f1e6; --tx2:#cfc7b8; --cinza:#968f80;
+  --display:"Fraunces",Georgia,serif; --num:"Anton","Impact",sans-serif;
+  --texto:"Poppins",system-ui,-apple-system,"Segoe UI",sans-serif;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--onix);color:var(--marfim);font-family:var(--texto);font-size:16px;line-height:1.6;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.wrap{max-width:900px;margin:0 auto;padding-block:40px 56px;display:flex;flex-direction:column;gap:64px;min-height:100vh}
+a{color:var(--ouro)}
+a:focus-visible{outline:2px solid var(--ouro2);outline-offset:3px;border-radius:6px}
+.marca{display:flex;align-items:center;gap:12px;letter-spacing:.32em;font-weight:600;font-size:14px}
+.marca svg{width:30px;height:22px;fill:var(--ouro)}
+.marca span{color:var(--cinza);letter-spacing:.2em}
+.hero{display:flex;flex-direction:column;gap:20px}
+.eyebrow{text-transform:uppercase;letter-spacing:.18em;font-size:12px;font-weight:600;color:var(--ouro)}
+h1{font-family:var(--display);font-weight:600;font-size:clamp(40px,7.5vw,68px);line-height:1.05;margin:0;letter-spacing:-.01em;text-wrap:balance}
+h1 em{font-style:italic;color:var(--ouro)}
+.hero p{margin:0;color:var(--tx2);font-size:18.5px;max-width:34em}
+.frentes{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}
+.frente{background:var(--carvao);border:1px solid var(--linha);border-radius:20px;padding:28px;display:flex;flex-direction:column;gap:14px;text-decoration:none;color:inherit;transition:border-color .15s,transform .15s}
+.frente:hover{border-color:var(--ouro3);transform:translateY(-2px)}
+.frente .n{font-family:var(--num);font-size:46px;line-height:1;color:var(--ouro)}
+.frente h2{font-family:var(--display);font-weight:600;font-size:30px;margin:0;line-height:1.1}
+.frente p{margin:0;color:var(--tx2);font-size:15.5px;flex:1}
+.frente ul{margin:0;padding:0;list-style:none;display:grid;gap:6px;font-size:14.5px;color:var(--tx2)}
+.frente li::before{content:"";display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--ouro);margin-right:10px;vertical-align:middle}
+.frente .ir{font-weight:700;color:var(--ouro);display:flex;gap:8px;align-items:center}
+.principios{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px}
+.principios div{border-top:2px solid var(--ouro3);padding-top:12px}
+.principios b{display:block;font-size:16px;margin-bottom:2px}
+.principios p{margin:0;font-size:14.5px;color:var(--tx2)}
+.contato{border:1px solid var(--linha);border-radius:18px;padding:24px;display:flex;flex-wrap:wrap;gap:12px 28px;align-items:center;justify-content:space-between}
+.contato p{margin:0;color:var(--tx2)}
+.contato a{font-weight:600;text-decoration:none}
+footer{margin-top:auto;text-align:center;color:var(--cinza);font-size:13px}
+@media (prefers-reduced-motion:reduce){.frente{transition:none}.frente:hover{transform:none}}
+</style>
+</head><body>
+<div class="wrap">
+  <div class="marca"><svg viewBox="0 0 44 32" aria-hidden="true"><path d="M2 28V8l10 9L22 2l10 15 10-9v20z"/></svg>GRUPO <span>IMPÉRIO</span></div>
+
+  <header class="hero">
+    <span class="eyebrow">Empresa brasileira · São Paulo</span>
+    <h1>Fazemos o trabalho <em>que ninguém vê</em>, para você decidir melhor.</h1>
+    <p>Comparar preço em três lojas antes de indicar uma oferta. Reescrever um perfil profissional a partir da trajetória real. Duas frentes, a mesma regra: mostrar o que está por trás de cada recomendação.</p>
+  </header>
+
+  <section class="frentes" aria-label="Nossas frentes">
+    <a class="frente" href="/consultoria/">
+      <span class="n">01</span>
+      <h2>Império Consultoria</h2>
+      <p>Reposicionamento de LinkedIn para executivos e profissionais seniores, em português e inglês, tudo pelo WhatsApp.</p>
+      <ul><li>Diagnóstico com nota do perfil</li><li>Perfil reescrito em PT e EN</li><li>Lista de fundadores aberta de 17 a 24/11</li></ul>
+      <span class="ir">Conhecer a consultoria →</span>
+    </a>
+    <a class="frente" href="/ofertas/">
+      <span class="n">02</span>
+      <h2>Império Ofertas</h2>
+      <p>Curadoria de ofertas: o mesmo produto comparado no Mercado Livre, na Amazon e na Shopee, e só a mais vantajosa vai para o grupo.</p>
+      <ul><li>Grupos por assunto no WhatsApp</li><li>Décor, Reparo, Pro, Fit e Achadinhos</li><li>Grátis, só os administradores postam</li></ul>
+      <span class="ir">Escolher um grupo →</span>
+    </a>
+  </section>
+
+  <section class="principios" aria-label="Princípios">
+    <div><b>Transparência</b><p>Links de afiliado sempre sinalizados com #publi. Comparação de preço junto da oferta.</p></div>
+    <div><b>Sem senha, nunca</b><p>Não pedimos senha, cartão ou pagamento fora dos canais oficiais.</p></div>
+    <div><b>Sem promessa vazia</b><p>Não prometemos vaga, salário nem desconto que não existe.</p></div>
+  </section>
+
+  <section class="contato" aria-label="Contato">
+    <p>Fale com a gente</p>
+    <a href="mailto:contato@grupoimperio.tec.br">contato@grupoimperio.tec.br</a>
+    <a href="https://wa.me/5511919163757" target="_blank" rel="noopener">WhatsApp (11) 91916-3757</a>
+  </section>
+
+  <footer>© 2026 Grupo Império</footer>
+</div>
+</body></html>

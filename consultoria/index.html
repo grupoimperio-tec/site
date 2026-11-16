@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="pt-BR"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Império Consultoria · LinkedIn Executivo</title>
+<meta name="description" content="Reposicionamos o LinkedIn de executivos e profissionais seniores, em português e inglês, tudo pelo WhatsApp. Lista de fundadores com diagnóstico gratuito.">
+<meta property="og:title" content="Império Consultoria · LinkedIn Executivo">
+<meta property="og:description" content="Reposicionamos o LinkedIn de executivos e profissionais seniores, em português e inglês, tudo pelo WhatsApp. Lista de fundadores com diagnóstico gratuito.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://grupoimperio.tec.br/consultoria/">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<style>html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0}img{max-width:100%}</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Poppins:wght@400;500;600;700&display=swap">
+<style>
+/* Layout: coluna editorial com "ficha de diagnóstico" como peça-assinatura. Dois acabamentos para decisão: Preto & Ouro e Marfim. */
+:root{
+  --bg:#0c0b09; --sup:#1a1712; --linha:#3a3226; --tx:#f6f1e6; --tx2:#cfc7b8; --mut:#968f80;
+  --ouro:#e2b13c; --ouro2:#f7d680; --ouro3:#966e1e; --btn-tx:#0c0b09; --ok:#8ccf84; --alerta:#e98a6b;
+  --display:"Fraunces",Georgia,"Times New Roman",serif; --num:"Anton","Impact",sans-serif;
+  --texto:"Poppins",system-ui,-apple-system,"Segoe UI",sans-serif;
+  color-scheme:dark;
+}
+:root{
+  --bg:#f7f3ea; --sup:#ffffff; --linha:#e3dac8; --tx:#16130e; --tx2:#4a443a; --mut:#857c6b;
+  --ouro:#a87b1c; --ouro2:#c99a35; --ouro3:#7a5812; --btn-tx:#ffffff; --ok:#3f8a3a; --alerta:#b4512f;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--tx);font-family:var(--texto);font-size:16px;line-height:1.65;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));transition:background .2s,color .2s}
+.wrap{max-width:780px;margin:0 auto;padding-block:28px 64px;display:flex;flex-direction:column;gap:72px}
+a{color:var(--ouro)}
+a:focus-visible,button:focus-visible{outline:2px solid var(--ouro2);outline-offset:3px}
+.topo{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.marca{display:flex;align-items:center;gap:10px;letter-spacing:.28em;font-weight:600;font-size:13px}
+.marca svg{width:26px;height:19px;fill:var(--ouro)}
+.marca span{color:var(--mut);letter-spacing:.18em}
+.troca{display:flex;border:1px solid var(--linha);border-radius:999px;padding:3px;gap:2px;font-size:12px}
+.troca button{background:none;border:0;color:var(--mut);padding:6px 12px;border-radius:999px;cursor:pointer;font-family:var(--texto)}
+.troca button[aria-pressed="true"]{background:var(--ouro);color:var(--btn-tx);font-weight:600}
+h1,h2{font-family:var(--display);font-weight:600;margin:0;text-wrap:balance;line-height:1.08;letter-spacing:-.01em}
+h1{font-size:clamp(38px,7vw,62px)}
+h1 em,h2 em{font-style:italic;color:var(--ouro)}
+h2{font-size:clamp(28px,4.6vw,40px)}
+.eyebrow{text-transform:uppercase;letter-spacing:.16em;font-size:12px;font-weight:600;color:var(--ouro)}
+p{margin:0}
+.hero{display:flex;flex-direction:column;gap:20px}
+.hero p.lead{font-size:18.5px;color:var(--tx2);max-width:36em}
+.ctas{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+.btn{display:inline-flex;align-items:center;gap:10px;background:var(--ouro);color:var(--btn-tx);font-weight:700;text-decoration:none;padding:15px 26px;border-radius:999px;font-size:15.5px}
+.btn:hover{background:var(--ouro2)}
+.btn.sec{background:transparent;color:var(--ouro);border:1.5px solid var(--ouro)}
+.nota{font-size:13px;color:var(--mut)}
+
+/* ficha de diagnóstico */
+.ficha{background:var(--sup);border:1px solid var(--linha);border-radius:16px;padding:22px;display:grid;grid-template-columns:auto 1fr;gap:22px;align-items:center}
+.score{width:128px;height:128px;border-radius:50%;display:grid;place-items:center;position:relative;
+  background:conic-gradient(var(--ouro) calc(var(--v)*36deg),var(--linha) 0)}
+.score::after{content:"";position:absolute;inset:10px;border-radius:50%;background:var(--sup)}
+.score b{position:relative;z-index:1;font-family:var(--num);font-weight:400;font-size:44px;line-height:1;font-variant-numeric:tabular-nums}
+.score small{display:block;font-size:11px;color:var(--mut);font-family:var(--texto);text-align:center;letter-spacing:.06em}
+.ficha h3{margin:0 0 6px;font-size:16px}
+.ficha ul{margin:0;padding:0;list-style:none;display:grid;gap:6px;font-size:14.5px;color:var(--tx2)}
+.ficha li{display:grid;grid-template-columns:18px 1fr;gap:8px}
+.ficha li::before{content:"!";color:var(--alerta);font-weight:700}
+.ficha li.ok::before{content:"✓";color:var(--ok)}
+
+section{display:flex;flex-direction:column;gap:22px}
+.dor{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+.dor div{border-left:2px solid var(--ouro3);padding-left:14px}
+.dor b{display:block;font-size:16px;margin-bottom:2px}
+.dor p{font-size:14.5px;color:var(--tx2)}
+.inclui{display:grid;gap:0;border-top:1px solid var(--linha)}
+.inclui div{display:grid;grid-template-columns:150px 1fr;gap:16px;padding:14px 0;border-bottom:1px solid var(--linha)}
+.inclui b{font-size:15px}
+.inclui p{color:var(--tx2);font-size:15px}
+.semanas{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+.semana{border:1px solid var(--linha);border-radius:14px;padding:16px;background:var(--sup);min-width:0}
+.semana .s{font-family:var(--num);font-size:30px;color:var(--ouro);line-height:1}
+.semana b{display:block;margin:8px 0 4px;font-size:14.5px}
+.semana p{font-size:13.5px;color:var(--tx2)}
+.casos{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}
+.caso{border:1px solid var(--linha);border-radius:16px;padding:20px;background:var(--sup);display:flex;flex-direction:column;gap:8px}
+.caso .quem{font-weight:700}
+.caso .papel{color:var(--mut);font-size:13.5px}
+.caso p{color:var(--tx2);font-size:15px}
+.preco{border:1.5px solid var(--ouro);border-radius:18px;padding:26px;display:flex;flex-direction:column;gap:12px}
+.preco .linha-preco{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap}
+.preco .de{color:var(--mut);text-decoration:line-through;font-size:18px}
+.preco .por{font-family:var(--num);font-size:64px;line-height:1;color:var(--ouro)}
+.preco ul{margin:0;padding-left:18px;color:var(--tx2);font-size:15px;display:grid;gap:4px}
+.garantias{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
+.garantias div{background:var(--sup);border:1px solid var(--linha);border-radius:14px;padding:16px}
+.garantias b{display:block;font-size:15px;margin-bottom:2px}
+.garantias p{font-size:14px;color:var(--tx2)}
+details{border-bottom:1px solid var(--linha);padding:14px 0}
+details summary{cursor:pointer;font-weight:600;list-style:none;display:flex;justify-content:space-between;gap:12px}
+details summary::after{content:"+";color:var(--ouro);font-weight:700}
+details[open] summary::after{content:"–"}
+details p{margin-top:8px;color:var(--tx2);font-size:15px}
+.fim{text-align:center;align-items:center}
+.fim p{color:var(--tx2);max-width:30em}
+footer{text-align:center;color:var(--mut);font-size:12.5px}
+.cal{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.cal div{border-top:2px solid var(--ouro3);padding-top:8px;font-size:13.5px;color:var(--tx2)}
+.cal b{display:block;color:var(--tx);font-size:15px}
+@media (max-width:640px){
+  .cal{grid-template-columns:1fr}
+  .semanas{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .inclui div{grid-template-columns:1fr;gap:2px}
+  .ficha{grid-template-columns:1fr;justify-items:start}
+}
+@media (prefers-reduced-motion:no-preference){.btn{transition:background .15s}}
+</style>
+
+</head><body>
+<div class="wrap">
+  <div class="topo">
+    <div class="marca"><svg viewBox="0 0 44 32" aria-hidden="true"><path d="M2 28V8l10 9L22 2l10 15 10-9v20z"/></svg>IMPÉRIO <span>CONSULTORIA</span></div>
+  </div>
+
+  <header class="hero">
+    <span class="eyebrow">LinkedIn Executivo · português e inglês</span>
+    <h1>Seu LinkedIn <em>trabalhando por você</em>, não contra você.</h1>
+    <p class="lead">Clientes, parceiros e o mercado formam uma opinião sobre você em segundos, pelo LinkedIn. Reposicionamos o seu LinkedIn em português e em inglês, com base na sua trajetória real, tudo pelo WhatsApp e com cerca de 40 minutos do seu tempo.</p>
+    <div class="ctas">
+      <a class="btn" id="cta1" href="https://chat.whatsapp.com/INHuilBjIyi6ZJvBAdgOVB" target="_blank" rel="noopener">Entrar na lista de fundadores</a>
+      <a class="btn sec" href="#como">Como funciona</a>
+    </div>
+    <p class="nota">Quem entra na lista de fundadores ganha o diagnóstico gratuito: 30 nesta semana, por ordem de entrada. Nunca pedimos sua senha.</p>
+  </header>
+
+  <article class="ficha" aria-label="Exemplo de diagnóstico">
+    <div class="score" style="--v:5.4"><b>5,4<small>NOTA DO PERFIL</small></b></div>
+    <div>
+      <span class="eyebrow">Exemplo real de diagnóstico</span>
+      <h3>Executiva de planejamento financeiro, setor de meios de pagamento</h3>
+      <ul>
+        <li class="ok">Conteúdo forte: resultados concretos, como fechamento contábil de 6 para 3 dias</li>
+        <li>Título genérico, que não diz o que ela resolve</li>
+        <li>Resultados escondidos no meio das experiências</li>
+        <li>Sem versão em inglês, apesar de mirar o mercado internacional</li>
+      </ul>
+    </div>
+  </article>
+
+  <section>
+    <span class="eyebrow">O problema</span>
+    <h2>Perfil bom de conteúdo, <em>invisível</em> na busca</h2>
+    <div class="dor">
+      <div><b>Título que só repete o cargo</b><p>Quem busca por especialidade não encontra você.</p></div>
+      <div><b>Resultados sem número</b><p>"Responsável por" não convence. "Reduzi de 6 para 3 dias" convence.</p></div>
+      <div><b>Nada em inglês</b><p>Clientes, parceiros e oportunidades de fora pulam perfis só em português.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <span class="eyebrow">O que está incluído</span>
+    <h2>Um reposicionamento completo, <em>não um texto bonito</em></h2>
+    <div class="inclui">
+      <div><b>Diagnóstico</b><p>Nota do perfil atual e as 3 prioridades que mais mudam o resultado.</p></div>
+      <div><b>Entrevista guiada</b><p>Perguntas curtas, por texto ou áudio, para extrair a sua trajetória e os seus números.</p></div>
+      <div><b>Perfil em PT e EN</b><p>Título, "Sobre", experiências e competências reescritos, com uma rodada de ajustes.</p></div>
+      <div><b>3 posts</b><p>Um por semana, com a sua voz, para o perfil novo ganhar movimento.</p></div>
+      <div><b>30 dias de suporte</b><p>Dúvidas e ajustes pelo WhatsApp depois da entrega.</p></div>
+    </div>
+  </section>
+
+  <section id="como">
+    <span class="eyebrow">Como funciona</span>
+    <h2>Quatro semanas, <em>tudo pelo WhatsApp</em></h2>
+    <div class="semanas">
+      <div class="semana"><span class="s">1</span><b>Diagnóstico e entrevista</b><p>Você recebe a nota e responde às perguntas no seu tempo.</p></div>
+      <div class="semana"><span class="s">2</span><b>Perfil novo</b><p>Versões em português e inglês para você revisar.</p></div>
+      <div class="semana"><span class="s">3</span><b>Publicação</b><p>Você aplica no LinkedIn, ou nós orientamos passo a passo.</p></div>
+      <div class="semana"><span class="s">4</span><b>Posts e ajustes</b><p>Posts semanais e os últimos ajustes.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <span class="eyebrow">Quem já passou pelo processo</span>
+    <h2>Casos reais, <em>com autorização</em></h2>
+    <div class="casos">
+      <div class="caso"><span class="quem">Cesar Alves Teixeira</span><span class="papel">Executivo · perfil reposicionado em PT e EN</span><p>Perfil reescrito em português e inglês, com título focado no que ele resolve e posts recorrentes sobre a área dele.</p></div>
+      <div class="caso"><span class="quem">Executiva de finanças</span><span class="papel">Planejamento financeiro · meios de pagamento</span><p>Saiu de nota 5,4 com um perfil que escondia os resultados. Novo perfil em português e inglês, focado no mercado internacional.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <span class="eyebrow">Investimento</span>
+    <div class="preco">
+      <h2>Vagas de fundador: <em>24 a 30/11</em></h2>
+      <div class="linha-preco"><span class="de">R$ 799</span><span class="por">R$ 399</span></div>
+      <ul>
+        <li>Somente 10 vagas, com preço de fundador</li>
+        <li>Bônus de fundador, para quem entrar na lista até 24/11: revisão completa do perfil 60 dias depois da entrega</li>
+        <li>Pix ou cartão parcelado, com nota fiscal</li>
+        <li>Em troca, pedimos um depoimento ao final, se você gostar do resultado</li>
+      </ul>
+      <div class="ctas"><a class="btn" href="https://chat.whatsapp.com/INHuilBjIyi6ZJvBAdgOVB" target="_blank" rel="noopener">Entrar na lista de fundadores</a></div>
+      <div class="cal">
+        <div><b>17 a 24/11</b>Lista de fundadores aberta, com diagnóstico gratuito</div>
+        <div><b>24/11</b>A lista fecha e as 10 vagas abrem para quem está nela</div>
+        <div><b>30/11</b>Encerramento do preço de fundador</div>
+      </div>
+      <p class="nota">Quem entra na lista agora recebe o convite antes da abertura.</p>
+    </div>
+  </section>
+
+  <section>
+    <span class="eyebrow">Compromissos</span>
+    <div class="garantias">
+      <div><b>Sem senha, nunca</b><p>Você aplica as mudanças, ou autoriza uma ferramenta oficial. Ninguém entra na sua conta.</p></div>
+      <div><b>Você aprova tudo</b><p>Nada é publicado no seu nome sem o seu ok.</p></div>
+      <div><b>Sigilo</b><p>Números e empresas que você não quiser expor ficam de fora.</p></div>
+      <div><b>Sem promessa vazia</b><p>Não prometemos cliente, vaga nem salário. Prometemos um perfil que mostra quem você é.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <span class="eyebrow">Perguntas frequentes</span>
+    <div>
+      <details><summary>Quanto do meu tempo vai tomar?</summary><p>Cerca de 40 minutos no total, espalhados nas quatro semanas. Dá para responder por áudio.</p></details>
+      <details><summary>E se eu estiver em transição?</summary><p>Também serve. O foco é o seu posicionamento: contamos a transição como parte da história, sem esconder e sem dramatizar. Busca de vagas não faz parte do pacote.</p></details>
+      <details><summary>Preciso falar inglês fluente?</summary><p>Não. Escrevemos a versão em inglês com você e explicamos cada escolha.</p></details>
+      <details><summary>E se eu não gostar?</summary><p>A entrega inclui uma rodada de ajustes e 30 dias de suporte pelo WhatsApp.</p></details>
+    </div>
+  </section>
+
+  <section class="fim">
+    <h2>Entre na <em>lista de fundadores</em></h2>
+    <p>Entre no grupo, responda 3 perguntas e mande o link do seu LinkedIn. Em até 24h úteis você recebe a nota do perfil e as 3 prioridades. São 30 diagnósticos nesta semana, por ordem de entrada.</p>
+    <a class="btn" href="https://chat.whatsapp.com/INHuilBjIyi6ZJvBAdgOVB" target="_blank" rel="noopener">Entrar na lista de fundadores</a>
+    <p class="nota">WhatsApp: (11) 91916-3757 · contato@grupoimperio.tec.br</p>
+  </section>
+
+  <footer>Império Consultoria · uma empresa do Grupo Império · © 2026 · <a href="/">grupoimperio.tec.br</a></footer>
+</div>
+</body></html>

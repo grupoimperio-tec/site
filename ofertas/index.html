@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="pt-BR"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Império Ofertas · o menor preço entre 3 lojas</title>
+<meta name="description" content="Comparamos o mesmo produto no Mercado Livre, na Amazon e na Shopee e mandamos só a oferta mais vantajosa nos grupos de WhatsApp.">
+<meta property="og:title" content="Império Ofertas · o menor preço entre 3 lojas">
+<meta property="og:description" content="Comparamos o mesmo produto no Mercado Livre, na Amazon e na Shopee e mandamos só a oferta mais vantajosa nos grupos de WhatsApp.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://grupoimperio.tec.br/ofertas/">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<style>html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0}img{max-width:100%}</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@400;500;600;700&display=swap">
+<style>
+/* Layout: uma coluna editorial estreita sobre ônix, com uma "nota de conferência" (ticket) como peça-assinatura */
+:root{
+  --onix:#0c0b09; --carvao:#1c1914; --linha:#3a3226; --ouro:#e2b13c; --ouro-claro:#f7d680; --ouro-escuro:#966e1e;
+  --marfim:#f6f1e6; --cinza:#968f80; --verde:#7fbf7a;
+  --display:"Anton","Impact","Arial Narrow",sans-serif;
+  --texto:"Poppins",system-ui,-apple-system,"Segoe UI",sans-serif;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{background:var(--onix);color:var(--marfim);font-family:var(--texto);font-size:16px;line-height:1.6;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.wrap{max-width:760px;margin:0 auto;padding-block:40px 64px;display:flex;flex-direction:column;gap:72px}
+a{color:var(--ouro)}
+a:focus-visible,button:focus-visible{outline:2px solid var(--ouro-claro);outline-offset:3px}
+.marca{display:flex;align-items:center;gap:12px;justify-content:center;letter-spacing:.32em;font-weight:600;font-size:15px}
+.marca svg{width:30px;height:22px;fill:var(--ouro)}
+h1,h2{font-family:var(--display);font-weight:400;letter-spacing:.01em;text-wrap:balance;margin:0;line-height:1.02}
+h1{font-size:clamp(46px,9vw,84px);text-align:center;
+  background:linear-gradient(180deg,var(--ouro-claro),var(--ouro) 55%,var(--ouro-escuro));-webkit-background-clip:text;background-clip:text;color:transparent}
+h2{font-size:clamp(32px,5.5vw,46px);color:var(--marfim)}
+h2 em{font-style:normal;color:var(--ouro)}
+.eyebrow{text-transform:uppercase;letter-spacing:.18em;font-size:12.5px;font-weight:600;color:var(--ouro)}
+.hero{display:flex;flex-direction:column;gap:22px;text-align:center;align-items:center}
+.hero p{max-width:34em;color:var(--marfim);font-size:18px;margin:0}
+.hero small{color:var(--cinza);font-size:13px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:var(--ouro);color:var(--onix);
+  font-weight:700;text-decoration:none;padding:16px 28px;border-radius:999px;font-size:16px}
+.btn:hover{background:var(--ouro-claro)}
+.btn.sec{background:transparent;color:var(--ouro);border:1.5px solid var(--ouro)}
+.ctas{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
+
+/* ticket de conferência */
+.ticket{background:var(--carvao);border:1px solid var(--linha);border-radius:18px;padding:24px;position:relative;
+  font-variant-numeric:tabular-nums;width:100%}
+.ticket::before,.ticket::after{content:"";position:absolute;top:50%;width:22px;height:22px;border-radius:50%;background:var(--onix);transform:translateY(-50%)}
+.ticket::before{left:-12px;border-right:1px solid var(--linha)} .ticket::after{right:-12px;border-left:1px solid var(--linha)}
+.ticket header{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:baseline;border-bottom:1px dashed var(--linha);padding-bottom:12px;margin-bottom:12px}
+.ticket .prod{font-weight:600;font-size:17px;min-width:0}
+.ticket .data{color:var(--cinza);font-size:13px;white-space:nowrap}
+.linha{display:grid;grid-template-columns:120px 1fr auto;gap:12px;align-items:center;padding:6px 0}
+.linha .loja{font-size:15px}
+.barra{height:12px;border-radius:6px;background:#3d362b}
+.linha.melhor .loja,.linha.melhor .valor{color:var(--ouro);font-weight:700}
+.linha.melhor .barra{background:var(--ouro)}
+.valor{font-weight:600;font-size:16px;text-align:right}
+.obs{margin-top:10px;font-size:13.5px;color:var(--cinza)}
+.obs b{color:var(--marfim);font-weight:600}
+.selo{display:inline-flex;gap:6px;align-items:center;border:1px solid var(--ouro-escuro);color:var(--ouro);border-radius:999px;padding:3px 12px;font-size:12px;font-weight:600;letter-spacing:.04em;text-transform:uppercase}
+
+section{display:flex;flex-direction:column;gap:22px}
+.passos{display:grid;gap:14px;counter-reset:p}
+.passo{display:grid;grid-template-columns:52px 1fr;gap:16px;align-items:start}
+.passo::before{counter-increment:p;content:counter(p);font-family:var(--display);font-size:40px;line-height:1;color:var(--ouro);text-align:center}
+.passo h3{margin:4px 0 2px;font-size:18px;font-weight:700}
+.passo p{margin:0;color:#d9d2c4;font-size:15.5px}
+.exemplos{display:grid;gap:18px}
+.regras{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.regra{border-top:2px solid var(--ouro-escuro);padding-top:12px}
+.regra h3{margin:0 0 4px;font-size:16px;font-weight:700;color:var(--marfim)}
+.regra p{margin:0;font-size:14.5px;color:#d9d2c4}
+.grupos{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px}
+.grupo{border:1px solid var(--linha);border-radius:16px;padding:20px;display:flex;flex-direction:column;gap:8px;background:var(--carvao)}
+.grupo .nome{font-family:var(--display);font-size:28px;letter-spacing:.02em;color:var(--ouro);line-height:1.1}
+.grupo p{margin:0;font-size:14.5px;color:#d9d2c4;flex:1}
+.grupo a{margin-top:8px;font-weight:700;text-decoration:none;font-size:15px}
+.grupo a:hover{text-decoration:underline}
+details{border-bottom:1px solid var(--linha);padding:14px 0}
+details summary{cursor:pointer;font-weight:600;font-size:16px;list-style:none;display:flex;justify-content:space-between;gap:12px}
+details summary::after{content:"+";color:var(--ouro);font-weight:700}
+details[open] summary::after{content:"–"}
+details p{margin:10px 0 0;color:#d9d2c4;font-size:15px}
+.quem{border:1px solid var(--linha);border-radius:18px;padding:24px;display:flex;flex-direction:column;gap:10px}
+.quem p{margin:0;color:#d9d2c4}
+.quem .copy{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.quem code{font-family:var(--texto);color:var(--marfim);background:#26221b;padding:6px 10px;border-radius:8px;font-size:14.5px;user-select:all}
+.mini{font-size:13px;color:var(--cinza);background:none;border:1px solid var(--linha);border-radius:8px;padding:6px 10px;cursor:pointer;font-family:var(--texto)}
+footer{text-align:center;color:var(--cinza);font-size:13px;display:flex;flex-direction:column;gap:6px}
+@media (max-width:480px){ .linha{grid-template-columns:96px 1fr auto} .passo{grid-template-columns:40px 1fr} }
+@media (prefers-reduced-motion:no-preference){ .btn{transition:background .15s} }
+</style>
+
+</head><body>
+<div class="wrap">
+  <header class="hero">
+    <div class="marca" aria-label="Império">
+      <svg viewBox="0 0 44 32" aria-hidden="true"><path d="M2 28V8l10 9L22 2l10 15 10-9v20z"/></svg>IMPÉRIO
+    </div>
+    <span class="eyebrow">Curadoria de ofertas · Mercado Livre · Amazon · Shopee</span>
+    <h1>Mesmo produto.<br>3 lojas.<br>Você recebe o menor preço.</h1>
+    <p>Antes de qualquer oferta chegar no seu WhatsApp, a gente procura o mesmo produto nas três lojas, confere o preço final com frete e manda só a mais vantajosa. Com a comparação junto, para você ver.</p>
+    <div class="ctas">
+      <a class="btn" href="#grupos">Escolher meu grupo</a>
+      <a class="btn sec" href="#como">Como a gente confere</a>
+    </div>
+    <small>Grátis · só os administradores postam · você sai quando quiser</small>
+  </header>
+
+  <article class="ticket" aria-label="Exemplo de comparação real">
+    <header><span class="prod">Smart Lâmpada Wi-Fi Positivo RGB 9W</span><span class="data">conferido em 13/11/2026</span></header>
+    <div class="linha melhor"><span class="loja">Amazon</span><span class="barra" style="width:46%"></span><span class="valor">R$ 39,00</span></div>
+    <div class="linha"><span class="loja">Mercado Livre</span><span class="barra" style="width:82%"></span><span class="valor">R$ 69,90</span></div>
+    <div class="linha"><span class="loja">Shopee</span><span class="barra" style="width:100%"></span><span class="valor">R$ 85,50</span></div>
+    <p class="obs"><b>R$ 46 de diferença</b> entre a loja mais cara e a mais barata, para o mesmo produto. Foi a da Amazon que foi para o grupo.</p>
+  </article>
+
+  <section id="como">
+    <span class="eyebrow">Não é só mais um grupo de promoção</span>
+    <h2>O que acontece antes de uma oferta <em>chegar até você</em></h2>
+    <div class="passos">
+      <div class="passo"><div><h3>Escolhemos pelo que vale a pena</h3><p>Produto com nota 4,5 ou mais, muitas vendas e vendedor confiável. Desconto inventado em cima de preço inflado fica de fora.</p></div></div>
+      <div class="passo"><div><h3>Buscamos o mesmo item nas 3 lojas</h3><p>Mercado Livre, Amazon e Shopee, mesmo modelo e mesma voltagem. Comparamos o preço final: frete, Pix e parcelamento sem juros.</p></div></div>
+      <div class="passo"><div><h3>Conferimos de novo na hora de enviar</h3><p>Preço muda rápido. Antes de cada envio o link é aberto, o preço e o estoque são checados de novo.</p></div></div>
+      <div class="passo"><div><h3>Mandamos só a mais vantajosa, com a comparação</h3><p>A mensagem mostra a loja escolhida e quanto custa nas outras. Você não precisa confiar na palavra de ninguém.</p></div></div>
+    </div>
+  </section>
+
+  <section>
+    <span class="eyebrow">Comparações reais desta semana</span>
+    <h2>O mais barato <em>nem sempre</em> é onde você pensa</h2>
+    <div class="exemplos">
+      <article class="ticket">
+        <header><span class="prod">Perfume Quasar Blue 100 ml, O Boticário</span><span class="data">conferido em 14/11/2026</span></header>
+        <div class="linha melhor"><span class="loja">Mercado Livre</span><span class="barra" style="width:97%"></span><span class="valor">R$ 84,51</span></div>
+        <div class="linha"><span class="loja">Amazon</span><span class="barra" style="width:100%"></span><span class="valor">R$ 87,16</span></div>
+        <p class="obs">Na Amazon aparecia <b>R$ 73,87</b>, mas com <b>R$ 13,29 de frete</b> de vendedor terceiro. O preço final que conta é o que você paga.</p>
+      </article>
+      <article class="ticket">
+        <header><span class="prod">Kit Acessórios Banheiro 6 peças</span><span class="data">conferido em 15/11/2026</span></header>
+        <div class="linha melhor"><span class="loja">Mercado Livre</span><span class="barra" style="width:98%"></span><span class="valor">R$ 69,97</span></div>
+        <div class="linha"><span class="loja">Amazon</span><span class="barra" style="width:100%"></span><span class="valor">R$ 71,15</span></div>
+        <p class="obs">Diferença pequena, mas no Mercado Livre era loja oficial, com frete grátis e 12x sem juros.</p>
+      </article>
+    </div>
+    <p class="obs">Preços do dia da conferência. Eles mudam, por isso a gente confere de novo a cada envio.</p>
+  </section>
+
+  <section>
+    <span class="eyebrow">Transparência</span>
+    <h2>As regras do <em>Império</em></h2>
+    <div class="regras">
+      <div class="regra"><h3>Você não paga a mais</h3><p>Os links são de afiliado: a loja nos paga uma comissão pela indicação. O preço para você é o mesmo.</p></div>
+      <div class="regra"><h3>Sempre sinalizado</h3><p>Toda oferta leva #publi e "link de afiliado". Nada disfarçado de dica pessoal.</p></div>
+      <div class="regra"><h3>Sem bagunça</h3><p>Só os administradores postam. Nada de corrente, venda de terceiros ou spam.</p></div>
+      <div class="regra"><h3>Nunca pedimos dados</h3><p>Não pedimos senha, cartão ou pagamento. A compra é sempre direto no site da loja.</p></div>
+    </div>
+  </section>
+
+  <section id="grupos">
+    <span class="eyebrow">Grupos no WhatsApp, separados por assunto</span>
+    <h2>Entre só no que <em>te interessa</em></h2>
+    <div class="grupos">
+      <div class="grupo"><span class="nome">Império Décor</span><p>Decoração, iluminação, Natal e peças para deixar a casa do seu jeito.</p><a href="https://chat.whatsapp.com/LlgVw16a84iHfa61cCrV7R" target="_blank" rel="noopener">Entrar no grupo →</a></div>
+      <div class="grupo"><span class="nome">Reparo Rápido</span><p>Ferramentas e itens para os consertos do dia a dia em casa.</p><a href="https://chat.whatsapp.com/IciB1OOGuFiHKTQ5kVPwVx" target="_blank" rel="noopener">Entrar no grupo →</a></div>
+      <div class="grupo"><span class="nome">Império Pro</span><p>Ferramentas e materiais para quem trabalha com obra.</p><a href="https://chat.whatsapp.com/CGDB07Nb1W06iez0yZea3i" target="_blank" rel="noopener">Entrar no grupo →</a></div>
+      <div class="grupo"><span class="nome">Império Fit</span><p>Equipamentos de treino e emagrecimento, do elástico à esteira. Sem remédio, chá ou promessa milagrosa.</p><a href="https://chat.whatsapp.com/HAyzpmUaxDdEn3Rf3079jG" target="_blank" rel="noopener">Entrar no grupo →</a></div>
+      <div class="grupo"><span class="nome">Achadinhos do Império</span><p>Os melhores achados do dia, de todos os assuntos, para quem quer ver tudo.</p><a href="https://chat.whatsapp.com/JuEtsRZ5LrEJbAbZARvtZX" target="_blank" rel="noopener">Entrar no grupo →</a></div>
+    </div>
+    <p class="obs">Prefere ver antes? Todo dia tem comparação nova no Instagram <a href="https://www.instagram.com/imperio.com.var" target="_blank" rel="noopener">@imperio.com.var</a>.</p>
+  </section>
+
+  <section>
+    <span class="eyebrow">Perguntas frequentes</span>
+    <h2>Antes de <em>entrar</em></h2>
+    <div>
+      <details><summary>Quantas mensagens por dia?</summary><p>Poucas e conferidas: algumas ofertas por dia em cada grupo, mais avisos especiais em datas como a Black Friday. Dá para silenciar o grupo e olhar quando quiser.</p></details>
+      <details><summary>Por que confiar no preço?</summary><p>Porque a mensagem mostra a comparação. Você vê quanto o produto custa nas outras lojas e pode conferir sozinho antes de comprar.</p></details>
+      <details><summary>Vocês vendem alguma coisa?</summary><p>Não. A compra é feita direto no Mercado Livre, na Amazon ou na Shopee. Entrega, troca e garantia são da loja.</p></details>
+      <details><summary>Meu número fica visível?</summary><p>Nos grupos do WhatsApp, o número dos participantes pode aparecer para os outros membros, como em qualquer grupo. Só os administradores podem enviar mensagens.</p></details>
+      <details><summary>Como saio?</summary><p>É só sair do grupo pelo próprio WhatsApp, a qualquer momento.</p></details>
+    </div>
+  </section>
+
+  <section class="quem">
+    <span class="eyebrow">Quem está por trás</span>
+    <p>O Império é uma iniciativa do <b>Grupo Império</b>, empresa brasileira com CNPJ, que também atua em consultoria e tecnologia. A curadoria de ofertas é o nosso começo, e a regra é a mesma em tudo: mostrar o que está por trás de cada recomendação.</p>
+    <div class="copy"><code id="email">contato@grupoimperio.tec.br</code><button class="mini" id="copiar" type="button">Copiar e-mail</button></div>
+  </section>
+
+  <footer>
+    <span>#publi · links de afiliado · preços sujeitos a alteração</span>
+    <span>© 2026 <a href="/">Grupo Império</a></span>
+  </footer>
+</div>
+<script>
+document.getElementById('copiar').addEventListener('click',async e=>{
+  const b=e.currentTarget, t=document.getElementById('email').textContent;
+  try{await navigator.clipboard.writeText(t);b.textContent='Copiado';}
+  catch(_){const r=document.createRange();r.selectNodeContents(document.getElementById('email'));const s=getSelection();s.removeAllRanges();s.addRange(r);b.textContent='Selecionado';}
+  setTimeout(()=>b.textContent='Copiar e-mail',1800);
+});
+</script>
+</body></html>
