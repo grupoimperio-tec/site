@@ -124,6 +124,14 @@ footer{text-align:center;color:var(--mut);font-size:12.5px}
   .ficha{grid-template-columns:1fr;justify-items:start}
 }
 @media (prefers-reduced-motion:no-preference){.btn{transition:background .15s}}
+.convite{border:1.5px solid var(--ouro);border-radius:18px;padding:22px 24px;background:var(--sup);display:flex;flex-direction:column;gap:12px}
+.convite .cod{font-style:normal;font-family:var(--num);color:var(--ouro);font-size:34px;letter-spacing:.04em;line-height:1}
+.convite ul{margin:0;padding-left:18px;color:var(--tx2);font-size:15px;display:grid;gap:4px}
+.ativar{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.ativar input{font:inherit;font-size:16px;text-transform:uppercase;letter-spacing:.06em;background:var(--bg);color:var(--tx);border:1.5px solid var(--linha);border-radius:999px;padding:13px 18px;width:12em}
+.ativar input:focus{outline:2px solid var(--ouro2);outline-offset:2px}
+.erro{color:var(--alerta);font-size:13.5px;min-height:1.2em}
+[hidden]{display:none!important}
 </style>
 
 </head><body>
@@ -131,6 +139,20 @@ footer{text-align:center;color:var(--mut);font-size:12.5px}
   <div class="topo">
     <div class="marca"><svg viewBox="0 0 44 32" aria-hidden="true"><path d="M2 28V8l10 9L22 2l10 15 10-9v20z"/></svg>IMPÉRIO <span>CONSULTORIA</span></div>
   </div>
+
+  <aside class="convite" id="convite-topo" hidden aria-label="Seu convite">
+    <span class="eyebrow">Convite de fundador</span>
+    <h2>Você recebeu o convite <em class="cod" id="convite-cod"></em></h2>
+    <p>Este convite é pessoal e tem validade curta. Com ele, você tem:</p>
+    <ul>
+      <li>Diagnóstico do seu perfil sem esperar a fila da semana</li>
+      <li>Lugar na Lista de Fundadores, com conteúdo toda semana</li>
+      <li>Prioridade nas 10 vagas de fundador (R$ 399 em vez de R$ 799)</li>
+      <li>Depois do diagnóstico, 3 convites para repassar a quem fizer sentido</li>
+    </ul>
+    <div class="ctas"><a class="btn" id="convite-btn" href="#" target="_blank" rel="noopener">Ativar meu convite no WhatsApp</a><a class="btn sec" href="#como">Antes, ver como funciona</a></div>
+    <p class="nota">A ativação é uma mensagem no WhatsApp da Império. Nunca pedimos senha nem acesso à sua conta.</p>
+  </aside>
 
   <header class="hero">
     <span class="eyebrow">LinkedIn Executivo · português e inglês</span>
@@ -269,6 +291,18 @@ footer{text-align:center;color:var(--mut);font-size:12.5px}
     </div>
   </section>
 
+  <section id="tenho-convite" aria-label="Ativar convite">
+    <span class="eyebrow">Recebeu um convite?</span>
+    <h2>Ative o seu <em>convite de fundador</em></h2>
+    <p style="color:var(--tx2)">Digite o código que você recebeu. Abrimos o WhatsApp da Império com a mensagem pronta para você enviar.</p>
+    <form class="ativar" id="form-convite" novalidate>
+      <label for="codigo" class="nota" style="width:100%">Código do convite</label>
+      <input id="codigo" name="codigo" placeholder="IC-00" autocomplete="off" maxlength="7" inputmode="text">
+      <button class="btn" type="submit" style="border:0;cursor:pointer;font-family:var(--texto)">Ativar no WhatsApp</button>
+    </form>
+    <p class="erro" id="convite-erro" aria-live="polite"></p>
+  </section>
+
   <section class="fim">
     <h2>Entre na <em>lista de fundadores</em></h2>
     <p>Entre no grupo, responda 3 perguntas e mande o link do seu LinkedIn. Em até 24h úteis você recebe a nota do perfil e as 3 prioridades. São 30 diagnósticos nesta semana, por ordem de entrada.</p>
@@ -278,4 +312,26 @@ footer{text-align:center;color:var(--mut);font-size:12.5px}
 
   <footer>Império Consultoria · uma empresa do Grupo Império · © 2026 · <a href="/">grupoimperio.tec.br</a></footer>
 </div>
+<script>
+(function(){
+  var WA="https://wa.me/5511919163757?text=";
+  var RE=/^IC-\d{2}[A-C]?$/;
+  function limpa(c){return String(c||"").trim().toUpperCase().replace(/\s+/g,"").replace(/^IC(\d)/,"IC-$1");}
+  function link(c){return WA+encodeURIComponent("Olá! Recebi o convite "+c+" e quero ativar o meu diagnóstico.");}
+  var c=limpa(new URLSearchParams(location.search).get("convite"));
+  if(RE.test(c)){
+    document.getElementById("convite-cod").textContent=c;
+    document.getElementById("convite-btn").href=link(c);
+    document.getElementById("convite-topo").hidden=false;
+    document.getElementById("codigo").value=c;
+  }
+  document.getElementById("form-convite").addEventListener("submit",function(e){
+    e.preventDefault();
+    var v=limpa(document.getElementById("codigo").value), erro=document.getElementById("convite-erro");
+    if(!RE.test(v)){erro.textContent="Confira o código: ele tem o formato IC-01 ou IC-01A.";return;}
+    erro.textContent="";
+    window.open(link(v),"_blank","noopener");
+  });
+})();
+</script>
 </body></html>
