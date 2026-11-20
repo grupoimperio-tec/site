@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="pt-BR"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Plano 2027 · Império Consultoria</title>
+<meta name="description" content="Ganhar mais não resolve sozinho. Planilha e guia para sair das dívidas, organizar o dinheiro e cumprir as metas de 2027, com diagnóstico e acompanhamento opcionais.">
+<meta property="og:title" content="Plano 2027 · Ganhar mais não resolve sozinho">
+<meta property="og:description" content="Planilha + guia para sair das dívidas e organizar 2027. A partir de R$ 39.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://grupoimperio.tec.br/plano2027/">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Fraunces:ital,opsz,wght@0,9..144,600;1,9..144,500&family=Poppins:wght@400;500;600;700&display=swap">
+<style>
+:root{--bg:#f7f3ea;--sup:#fff;--linha:#e3dac8;--tx:#16130e;--tx2:#4a443a;--mut:#857c6b;--ouro:#a87b1c;--ouro2:#c99a35;--ouro3:#7a5812;--btn-tx:#fff;--alerta:#b4512f;--ok:#3f8a3a;
+--display:"Fraunces",Georgia,serif;--num:"Anton","Impact",sans-serif;--texto:"Poppins",system-ui,sans-serif;color-scheme:light}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font-family:var(--texto);font-size:16px;line-height:1.65;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.wrap{max-width:820px;margin:0 auto;padding-block:28px 64px;display:flex;flex-direction:column;gap:64px}
+a{color:var(--ouro)} a:focus-visible{outline:2px solid var(--ouro2);outline-offset:3px}
+.marca{display:flex;align-items:center;gap:10px;letter-spacing:.28em;font-weight:600;font-size:13px}
+.marca svg{width:26px;height:19px;fill:var(--ouro)} .marca span{color:var(--mut);letter-spacing:.18em}
+h1,h2{font-family:var(--display);font-weight:600;margin:0;line-height:1.08;letter-spacing:-.01em;text-wrap:balance}
+h1{font-size:clamp(38px,7.2vw,64px)} h2{font-size:clamp(28px,4.6vw,40px)}
+h1 em,h2 em{font-style:italic;color:var(--ouro)}
+p{margin:0} .eyebrow{text-transform:uppercase;letter-spacing:.16em;font-size:12px;font-weight:600;color:var(--ouro)}
+.hero{display:flex;flex-direction:column;gap:20px} .lead{font-size:18.5px;color:var(--tx2);max-width:36em}
+.ctas{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+.btn{display:inline-flex;align-items:center;justify-content:center;background:var(--ouro);color:var(--btn-tx);font-weight:700;text-decoration:none;padding:15px 26px;border-radius:999px;font-size:15.5px}
+.btn:hover{background:var(--ouro2)} .btn.sec{background:transparent;color:var(--ouro);border:1.5px solid var(--ouro)}
+.nota{font-size:13px;color:var(--mut)}
+section{display:flex;flex-direction:column;gap:22px}
+.conta{background:var(--sup);border:1px solid var(--linha);border-radius:16px;padding:22px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;text-align:center}
+.conta b{display:block;font-family:var(--num);font-weight:400;font-size:34px;line-height:1.1;color:var(--tx)}
+.conta .neg b{color:var(--alerta)} .conta span{font-size:13px;color:var(--mut)}
+.conta p{grid-column:1/-1;color:var(--tx2);font-size:15px;text-align:left;border-top:1px solid var(--linha);padding-top:12px}
+.passos{display:grid;gap:0;border-top:1px solid var(--linha)}
+.passos>div{display:grid;grid-template-columns:44px 1fr;gap:14px;padding:14px 0;border-bottom:1px solid var(--linha)}
+.passos .n{font-family:var(--num);font-size:30px;color:var(--ouro);line-height:1}
+.passos b{display:block} .passos p{color:var(--tx2);font-size:15px}
+.inclui{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px}
+.inclui div{border-left:2px solid var(--ouro3);padding-left:14px} .inclui b{display:block} .inclui p{font-size:14.5px;color:var(--tx2)}
+.planos{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:14px;align-items:stretch}
+.plano{background:var(--sup);border:1px solid var(--linha);border-radius:18px;padding:22px;display:flex;flex-direction:column;gap:10px}
+.plano.destaque{border:2px solid var(--ouro)}
+.plano .tag{align-self:flex-start;background:var(--ouro);color:#fff;font-size:11px;font-weight:700;letter-spacing:.08em;border-radius:999px;padding:3px 10px}
+.plano h3{margin:0;font-size:18px}
+.plano .pr{font-family:var(--num);font-size:46px;line-height:1;color:var(--ouro)} .plano .pr small{display:block;margin-top:4px;font-family:var(--texto);font-size:14px;color:var(--mut)}
+.plano ul{margin:0;padding-left:18px;color:var(--tx2);font-size:14.5px;display:grid;gap:4px;flex:1;align-content:start}
+.plano .btn{width:100%}
+details{border-bottom:1px solid var(--linha);padding:14px 0}
+details summary{cursor:pointer;font-weight:600;list-style:none;display:flex;justify-content:space-between;gap:12px}
+details summary::after{content:"+";color:var(--ouro);font-weight:700} details[open] summary::after{content:"–"}
+details p{margin-top:8px;color:var(--tx2);font-size:15px}
+.fim{text-align:center;align-items:center} .fim p{color:var(--tx2);max-width:32em}
+footer{text-align:center;color:var(--mut);font-size:12.5px;display:flex;flex-direction:column;gap:6px}
+@media (max-width:640px){.conta{grid-template-columns:1fr}}
+</style></head><body>
+<div class="wrap">
+  <div class="marca"><svg viewBox="0 0 44 32" aria-hidden="true"><path d="M2 28V8l10 9L22 2l10 15 10-9v20z"/></svg>IMPÉRIO <span>CONSULTORIA</span></div>
+
+  <header class="hero">
+    <span class="eyebrow">Plano 2027 · organização financeira</span>
+    <h1>“Em 2027 eu vou ganhar mais.” <em>E o dinheiro vai para onde?</em></h1>
+    <p class="lead">Ganhar mais não resolve sozinho. Se os juros do cartão e do cheque especial continuam correndo, o aumento vira parcela maior. O Plano 2027 organiza o seu dinheiro, tira você das dívidas caras e transforma a sobra em metas que se cumprem.</p>
+    <div class="ctas"><a class="btn" href="#planos">Quero meu Plano 2027</a><a class="btn sec" href="#como">Como funciona</a></div>
+    <p class="nota">Para pessoa física e pequeno empreendedor (MEI). A partir de R$ 39.</p>
+  </header>
+
+  <section aria-label="A conta que importa">
+    <span class="eyebrow">A conta que importa</span>
+    <h2>Sobra do mês = <em>o que entra − o que sai</em></h2>
+    <div class="conta">
+      <div><b>R$ 4.000</b><span>entram</span></div>
+      <div><b>R$ 3.670</b><span>saem (R$ 716 só de juros)</span></div>
+      <div><b>R$ 330</b><span>sobram</span></div>
+      <p>Exemplo ilustrativo: com R$ 11.800 em três dívidas, R$ 716 por mês iam embora só em juros. Antes de ganhar mais, dá para recuperar boa parte disso negociando e atacando a dívida certa primeiro.</p>
+    </div>
+  </section>
+
+  <section id="como">
+    <span class="eyebrow">Como funciona</span>
+    <h2>Cinco passos, <em>nesta ordem</em></h2>
+    <div class="passos">
+      <div><span class="n">1</span><div><b>Raio-X das dívidas</b><p>Todas listadas, com juros e atraso. Ensinamos a puxar o relatório gratuito do Banco Central que mostra o que está no seu CPF.</p></div></div>
+      <div><span class="n">2</span><div><b>Orçamento do ano</b><p>Janeiro a dezembro de 2027, separando o essencial do resto, com a sobra de cada mês à vista.</p></div></div>
+      <div><span class="n">3</span><div><b>Ordem de ataque</b><p>A planilha diz qual dívida pagar primeiro: a de juros mais altos ou a menor, para vitórias rápidas.</p></div></div>
+      <div><span class="n">4</span><div><b>Negociação</b><p>Roteiro do que pedir, onde negociar e os direitos que te ajudam. Você chega sabendo o seu limite.</p></div></div>
+      <div><span class="n">5</span><div><b>Metas e reserva</b><p>Quanto guardar por mês para cada meta de 2027, começando pela reserva de emergência.</p></div></div>
+    </div>
+  </section>
+
+  <section>
+    <span class="eyebrow">O que vem no kit</span>
+    <h2>Planilha + guia, <em>prontos para usar</em></h2>
+    <div class="inclui">
+      <div><b>Planilha Plano 2027</b><p>Orçamento mês a mês, dívidas, negociações, metas e uma aba para MEI. Funciona no Excel e no Google Planilhas.</p></div>
+      <div><b>Nota financeira de 0 a 10</b><p>Um painel que mostra sua nota e qual é o próximo passo, todo mês.</p></div>
+      <div><b>Guia em PDF</b><p>O método, o roteiro de negociação e como ganhar mais do jeito certo.</p></div>
+    </div>
+  </section>
+
+  <section id="planos">
+    <span class="eyebrow">Planos</span>
+    <h2>Escolha <em>como quer começar</em></h2>
+    <div class="planos">
+      <div class="plano"><h3>Kit Plano 2027</h3><div class="pr">R$ 39 <small>uma vez</small></div>
+        <ul><li>Planilha Plano 2027</li><li>Guia em PDF</li><li>Para fazer no seu ritmo</li></ul>
+        <a class="btn sec" href="https://wa.me/5511919163757?text=Oi%21%20Quero%20o%20Kit%20Plano%202027%20%28R%24%2039%29." target="_blank" rel="noopener">Quero o kit</a></div>
+      <div class="plano destaque"><span class="tag">MAIS ESCOLHIDO</span><h3>Kit + diagnóstico</h3><div class="pr">R$ 197 <small>uma vez</small></div>
+        <ul><li>Tudo do kit</li><li>Analisamos a sua planilha</li><li>Nota, 3 prioridades e plano de 90 dias, pelo WhatsApp</li></ul>
+        <a class="btn" href="https://wa.me/5511919163757?text=Oi%21%20Quero%20o%20Plano%202027%20com%20diagn%C3%B3stico%20%28R%24%20197%29." target="_blank" rel="noopener">Quero o diagnóstico</a></div>
+      <div class="plano"><h3>Acompanhamento</h3><div class="pr">R$ 59 <small>por mês</small></div>
+        <ul><li>Revisão mensal do seu plano</li><li>Ajustes e nota atualizada</li><li>Sem fidelidade</li></ul>
+        <a class="btn sec" href="https://wa.me/5511919163757?text=Oi%21%20Quero%20o%20acompanhamento%20mensal%20do%20Plano%202027%20%28R%24%2059/m%C3%AAs%29." target="_blank" rel="noopener">Assinar o acompanhamento</a></div>
+      <div class="plano"><h3>Com contador responsável</h3><div class="pr" style="font-size:30px">Sob consulta</div>
+        <ul><li>Para MEI e pequeno empreendedor</li><li>Organização tributária e pró-labore</li><li>Imposto de renda</li></ul>
+        <a class="btn sec" href="https://wa.me/5511919163757?text=Oi%21%20Quero%20saber%20do%20Plano%202027%20com%20contador%20respons%C3%A1vel%20%28MEI%20/%20imposto%20de%20renda%29." target="_blank" rel="noopener">Falar com a gente</a></div>
+    </div>
+    <p class="nota">Pagamento pelo link oficial da Asaas (Pix, boleto ou cartão), enviado no WhatsApp da Império. Nunca pedimos senhas.</p>
+  </section>
+
+  <section>
+    <span class="eyebrow">Ganhar mais, do jeito certo</span>
+    <h2>Quer aumentar a renda em 2027? <em>Comece pelo LinkedIn.</em></h2>
+    <p style="color:var(--tx2)">Com as contas em ordem, cada real a mais tem destino. Se o seu objetivo é uma nova vaga ou promoção, a Império Consultoria faz o diagnóstico gratuito do seu LinkedIn: a nota do perfil e as 3 prioridades do que mudar.</p>
+    <div class="ctas"><a class="btn sec" href="/consultoria/">Conhecer a consultoria de LinkedIn</a></div>
+  </section>
+
+  <section>
+    <span class="eyebrow">Dúvidas</span>
+    <details><summary>Preciso entender de finanças?</summary><p>Não. A planilha tem um passo a passo na primeira aba e um exemplo de como preencher. Você só digita nas células amarelas.</p></details>
+    <details><summary>Vocês dizem onde investir?</summary><p>Não. O Plano 2027 é organização e planejamento financeiro: orçamento, dívidas, negociação e metas. Não fazemos recomendação de investimentos.</p></details>
+    <details><summary>Vocês negociam as dívidas por mim?</summary><p>Não: quem negocia e assina é você. Nós preparamos você com o roteiro, o seu limite de parcela e os canais certos. No plano com diagnóstico, revisamos as propostas com você.</p></details>
+    <details><summary>Como recebo o kit?</summary><p>Assim que o pagamento é confirmado, enviamos a planilha e o guia no seu WhatsApp e por e-mail.</p></details>
+    <details><summary>Tenho MEI. Serve para mim?</summary><p>Sim. Há uma aba para separar o dinheiro da empresa do seu e definir uma retirada fixa. Para organização tributária e imposto de renda, veja o plano com contador responsável.</p></details>
+    <details><summary>E os meus dados?</summary><p>Pedimos só o necessário, nunca senhas de banco. A planilha é sua e fica com você.</p></details>
+  </section>
+
+  <section class="fim">
+    <h2>2027 começa <em>antes de janeiro</em>.</h2>
+    <p>Quem organiza em dezembro entra no ano sabendo para onde vai cada real.</p>
+    <div class="ctas" style="justify-content:center"><a class="btn" href="#planos">Quero meu Plano 2027</a><a class="btn sec" href="https://wa.me/5511919163757?text=Oi%21%20Tenho%20uma%20d%C3%BAvida%20sobre%20o%20Plano%202027." target="_blank" rel="noopener">Tirar uma dúvida</a></div>
+  </section>
+
+  <footer><p>Império Consultoria · grupoimperio.tec.br · WhatsApp (11) 91916-3757</p>
+  <p>Organização e planejamento financeiro; não é recomendação de investimento. Exemplos ilustrativos, sem promessa de resultado.</p></footer>
+</div></body></html>
