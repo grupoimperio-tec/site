@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="pt-BR"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Rotas 2027 · roteiros de carreira em fases</title>
+<meta name="description" content="Roteiros de carreira em fases, com guia em PDF e planilha de acompanhamento. O que estudar, em que ordem e o que entregar em cada etapa.">
+<meta property="og:title" content="Rotas 2027">
+<meta property="og:description" content="Roteiros de carreira em fases: guia + planilha.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://grupoimperio.tec.br/rotas/">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Fraunces:ital,opsz,wght@0,9..144,600;1,9..144,500&family=Poppins:wght@400;500;600;700&display=swap">
+<style>
+:root{--bg:#f7f3ea;--sup:#fff;--linha:#e3dac8;--tx:#16130e;--tx2:#4a443a;--mut:#857c6b;--ouro:#a87b1c;--ouro2:#c99a35;--ouro3:#7a5812;
+--display:"Fraunces",Georgia,serif;--num:"Anton","Impact",sans-serif;--texto:"Poppins",system-ui,sans-serif;color-scheme:light}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font-family:var(--texto);font-size:16px;line-height:1.65;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.wrap{max-width:860px;margin:0 auto;padding-block:28px 64px;display:flex;flex-direction:column;gap:60px}
+a{color:var(--ouro)} a:focus-visible{outline:2px solid var(--ouro2);outline-offset:3px}
+.marca{display:flex;align-items:center;gap:10px;letter-spacing:.28em;font-weight:600;font-size:13px}
+.marca span{color:var(--mut);letter-spacing:.18em}
+h1,h2{font-family:var(--display);font-weight:600;margin:0;line-height:1.08;letter-spacing:-.01em;text-wrap:balance}
+h1{font-size:clamp(36px,6.6vw,58px)} h2{font-size:clamp(27px,4.4vw,38px)}
+h1 em,h2 em{font-style:italic;color:var(--ouro)}
+p{margin:0} .eyebrow{text-transform:uppercase;letter-spacing:.16em;font-size:12px;font-weight:600;color:var(--ouro)}
+.hero{display:grid;grid-template-columns:1.25fr .9fr;gap:36px;align-items:center}
+.hero .txt{display:flex;flex-direction:column;gap:18px}
+.hero img{width:100%;height:auto;border-radius:18px;border:1px solid var(--linha);box-shadow:0 18px 40px rgba(22,19,14,.10)}
+.lead{font-size:18px;color:var(--tx2)}
+.ctas{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+.btn{display:inline-flex;align-items:center;justify-content:center;background:var(--ouro);color:#fff;font-weight:700;text-decoration:none;padding:15px 26px;border-radius:999px;font-size:15.5px}
+.btn:hover{background:var(--ouro2)} .btn.sec{background:transparent;color:var(--ouro);border:1.5px solid var(--ouro)}
+.nota{font-size:13px;color:var(--mut)}
+section{display:flex;flex-direction:column;gap:20px}
+.porque{display:grid;gap:12px}
+.porque div{background:var(--sup);border:1px solid var(--linha);border-radius:14px;padding:16px 18px;color:var(--tx2);font-size:15px}
+.porque b{color:var(--tx)}
+.fases{display:grid;border-top:1px solid var(--linha)}
+.fases>div{display:grid;grid-template-columns:44px 1fr;gap:14px;padding:16px 0;border-bottom:1px solid var(--linha)}
+.fases .n{font-family:var(--num);font-size:30px;color:var(--ouro);line-height:1}
+.fases b{display:block} .fases .m{font-size:12.5px;color:var(--mut);font-weight:600;letter-spacing:.04em}
+.fases p{color:var(--tx2);font-size:15px} .fases .ent{margin-top:6px;font-size:14px;color:var(--tx)}
+.inclui{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px}
+.inclui div{border-left:2px solid var(--ouro3);padding-left:14px} .inclui b{display:block} .inclui p{font-size:14.5px;color:var(--tx2)}
+.compra{background:var(--sup);border:2px solid var(--ouro);border-radius:20px;padding:26px;display:grid;grid-template-columns:1fr auto;gap:18px;align-items:center}
+.compra .pr{font-family:var(--num);font-size:52px;line-height:1;color:var(--ouro)} .compra .pr small{display:block;margin-top:6px;font-family:var(--texto);font-size:14px;color:var(--mut)}
+.compra ul{margin:10px 0 0;padding-left:18px;color:var(--tx2);font-size:14.5px}
+details{border-bottom:1px solid var(--linha);padding:14px 0}
+details summary{cursor:pointer;font-weight:600;list-style:none;display:flex;justify-content:space-between;gap:12px}
+details summary::after{content:"+";color:var(--ouro);font-weight:700} details[open] summary::after{content:"–"}
+details p{margin-top:8px;color:var(--tx2);font-size:15px}
+footer{text-align:center;color:var(--mut);font-size:12.5px;display:flex;flex-direction:column;gap:6px}
+footer a{color:var(--mut)}
+@media (max-width:720px){.hero{grid-template-columns:1fr}.hero img{max-width:360px}.compra{grid-template-columns:1fr}}
+.lista{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px}
+.rota{background:var(--sup);border:1px solid var(--linha);border-radius:18px;padding:22px;display:flex;flex-direction:column;gap:10px;text-decoration:none;color:inherit}
+a.rota:hover{border-color:var(--ouro)} .rota h3{margin:0;font-family:var(--display);font-size:24px;line-height:1.1}
+.rota p{color:var(--tx2);font-size:14.5px;flex:1} .rota .st{font-size:12px;font-weight:700;letter-spacing:.08em;color:var(--ouro)}
+.rota.breve{opacity:.75} .rota.breve .st{color:var(--mut)}
+</style></head><body>
+<div class="wrap">
+  <div class="marca">ROTA <span>2027</span></div>
+  <header class="hero" style="grid-template-columns:1fr">
+    <div class="txt">
+      <span class="eyebrow">Rotas 2027 · carreira</span>
+      <h1>Para onde você quer ir? <em>A rota mostra o caminho.</em></h1>
+      <p class="lead">Cada rota é um guia em PDF com uma planilha de acompanhamento: o que estudar, em que ordem e o que entregar em cada fase para chegar ao próximo cargo. Você segue no seu ritmo, com 8 a 10 horas por semana.</p>
+    </div>
+  </header>
+  <section>
+    <span class="eyebrow">Escolha a sua</span>
+    <div class="lista">
+      <a class="rota" href="/rotas/contador-4-0/"><span class="st">DISPONÍVEL · R$ 47</span><h3>Contador 4.0</h3><p>Do contador que só lança ao controller que trabalha com dados, automação e IA. 5 fases, 8 a 12 meses.</p><span class="btn sec" style="align-self:flex-start">Ver a rota</span></a>
+      <div class="rota breve"><span class="st">EM BREVE</span><h3>Analista de Dados e BI</h3><p>Excel, SQL, Power BI, estatística e Python básico até o primeiro cargo de analista. 6 a 9 meses.</p></div>
+      <div class="rota breve"><span class="st">EM BREVE</span><h3>Engenheiro de IA</h3><p>De quem já programa ao primeiro cargo em engenharia de IA: modelos de linguagem, produção e agentes. 6 a 12 meses.</p></div>
+      <div class="rota breve"><span class="st">EM BREVE</span><h3>Segurança da Informação</h3><p>Do suporte de TI à segurança da informação e GRC, com laboratórios práticos. 9 a 15 meses.</p></div>
+    </div>
+  </section>
+  <section>
+    <span class="eyebrow">Como funciona</span>
+    <div class="fases">
+      <div><span class="n">1</span><div><b>Escolha a rota</b><p>Cada uma parte de onde você está hoje e diz para onde leva.</p></div></div>
+      <div><span class="n">2</span><div><b>Siga as fases</b><p>Cada fase tem o que estudar (com recursos gratuitos indicados) e uma entrega para o portfólio.</p></div></div>
+      <div><span class="n">3</span><div><b>Acompanhe na planilha</b><p>Progresso, horas, portfólio, custos e candidaturas no mesmo lugar.</p></div></div>
+    </div>
+  </section>
+  <footer><p>Rota 2027 · grupoimperio.tec.br · <a href="/">Início</a></p>
+  <p>Prazos são estimativas; as rotas não prometem vaga nem salário.</p></footer>
+</div></body></html>
