@@ -329,17 +329,17 @@ if(document.body)go();else document.addEventListener('DOMContentLoaded',go);})()
     <h2>Entre na <em>lista de fundadores</em></h2>
     <p>Entre no grupo, responda 3 perguntas e mande o link do seu LinkedIn. Em até 24h úteis você recebe a nota do perfil e as 3 prioridades. São 30 diagnósticos nesta semana, por ordem de entrada.</p>
     <a class="btn" href="https://chat.whatsapp.com/INHuilBjIyi6ZJvBAdgOVB" target="_blank" rel="noopener">Entrar na lista de fundadores</a>
-    <p class="nota">WhatsApp: (11) 91916-3757 · contato@grupoimperio.tec.br</p>
+    <p class="nota">WhatsApp da Consultoria: <a href="https://wa.me/5511912866200?text=Ol%C3%A1!%20Quero%20o%20diagn%C3%B3stico%20do%20meu%20LinkedIn.">(11) 91286-6200</a> · contato@grupoimperio.tec.br</p>
   </section>
 
   <footer>Império Consultoria · uma empresa do Grupo Império · © 2026 · <a href="/">grupoimperio.tec.br</a></footer>
 </div>
 <script>
 (function(){
-  var WA="https://wa.me/5511919163757?text=";
+  var WA="https://wa.me/5511912866200?text=";
   var RE=/^IC-\d{2}[A-C]?$/;
   function limpa(c){return String(c||"").trim().toUpperCase().replace(/\s+/g,"").replace(/^IC(\d)/,"IC-$1");}
-  function link(c){return WA+encodeURIComponent("Olá! Recebi o convite "+c+" e quero ativar o meu diagnóstico.");}
+  function link(c){return WA+encodeURIComponent("Olá! Recebi o convite "+c+" e quero ativar o meu diagnóstico do LinkedIn.");}
   var c=limpa(new URLSearchParams(location.search).get("convite"));
   if(RE.test(c)){
     document.getElementById("convite-cod").textContent=c;
