@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /podologia/
 
 Sitemap: https://grupoimperio.tec.br/sitemap.xml
