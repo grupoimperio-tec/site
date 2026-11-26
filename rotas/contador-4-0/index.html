@@ -131,7 +131,7 @@ if(document.body)go();else document.addEventListener('DOMContentLoaded',go);})()
       <div style="display:flex;flex-direction:column;gap:12px;align-items:flex-start"><div class="pr">R$ 47 <small>pagamento único · em até 12x no cartão</small></div>
         <a class="btn" href="https://pay.hotmart.com/T108609880Y" rel="noopener">Quero a rota</a></div>
     </div>
-    <p class="nota">Pagamento seguro pela Hotmart: Pix, boleto, cartão ou PayPal. O parcelamento tem juros da operadora.</p>
+    <p class="nota">Pagamento seguro pela Hotmart: Pix, boleto, cartão ou PayPal. O parcelamento tem juros da operadora.<br>Prefere outra plataforma? Pague pela <a href="https://pay.kiwify.com.br/qmcL2y9" rel="noopener" style="color:inherit">Kiwify</a> (cartão, Pix ou Apple Pay) ou pela <a href="https://chk.eduzz.com/D0R868Q29Y" rel="noopener" style="color:inherit">Eduzz</a>. Mesmo produto e mesmo preço.</p>
     <div class="compra" style="margin-top:22px">
       <div><span class="eyebrow">Quer ir além? · Contador 4.0 Completa</span>
         <ul><li>Tudo da rota Contador 4.0</li><li>Estrutura financeira pronta: contas a pagar e receber, fluxo de caixa, DRE gerencial e planejamento de 36 meses</li><li>Análise por escrito</li></ul></div>
@@ -145,9 +145,20 @@ if(document.body)go();else document.addEventListener('DOMContentLoaded',go);})()
     <details><summary>É um curso com aulas?</summary><p>Não. É um guia em PDF e uma planilha: um roteiro do que estudar, em que ordem e o que entregar em cada fase. Os cursos indicados no guia são gratuitos e oficiais (como Microsoft Learn e Kaggle Learn).</p></details>
     <details><summary>Preciso saber programar?</summary><p>Não. A rota começa pelo Excel que você já usa e só chega em Python básico na fase 3, com indicação de material gratuito para começar do zero.</p></details>
     <details><summary>Garante emprego ou aumento?</summary><p>Não. A rota organiza o caminho e as entregas que mostram o que você sabe fazer. Resultado depende da sua dedicação e do mercado.</p></details>
-    <details><summary>E se eu não gostar?</summary><p>Você tem 7 dias de garantia: pede o reembolso direto na Hotmart.</p></details>
+    <details><summary>E se eu não gostar?</summary><p>Você tem 7 dias de garantia: pede o reembolso direto na plataforma em que comprou.</p></details>
   </section>
 
   <footer><p>Rota 2027 · grupoimperio.tec.br</p>
   <p>Fontes: Fórum Econômico Mundial, Future of Jobs 2025; Robert Half, Guia Salarial 2027. Prazos são estimativas; sem promessa de resultado.</p></footer>
-</div></body></html>
+</div><script>
+/* Origem da visita nos checkouts (Hotmart src/sck, Kiwify e Eduzz utm) */
+(function(){var q=new URLSearchParams(location.search);
+var us=q.get('utm_source')||(q.get('fbclid')?'facebook':'site'),um=q.get('utm_medium')||'',uc=q.get('utm_campaign')||'',ux=q.get('utm_content')||'';
+var src=(uc||us).slice(0,30),sck=[us,uc,ux].filter(Boolean).join('_').replace(/[^\w\-]/g,'').slice(0,60)||'site';
+function tag(a){try{var u=new URL(a.href),h=u.hostname;if(/pay\.hotmart\.com/.test(h)){u.searchParams.set('src',src);u.searchParams.set('sck',sck);}
+else if(/kiwify\.com|eduzz\.com/.test(h)){u.searchParams.set('utm_source',us);if(um)u.searchParams.set('utm_medium',um);if(uc)u.searchParams.set('utm_campaign',uc);if(ux)u.searchParams.set('utm_content',ux);if(/kiwify/.test(h)){u.searchParams.set('src',src);u.searchParams.set('sck',sck);}}
+else return;a.href=u.toString();}catch(e){}}
+function run(){document.querySelectorAll('a[href]').forEach(tag);}
+if(document.readyState!=='loading')run();else document.addEventListener('DOMContentLoaded',run);})();
+</script>
+</body></html>
