@@ -115,16 +115,27 @@ if(document.body)go();else document.addEventListener('DOMContentLoaded',go);})()
       <div><span class="eyebrow">Rota 2027 · Contador 4.0 Completa</span>
         <ul><li>Guia em PDF com as 5 fases + planilha de acompanhamento</li><li>Estrutura financeira completa em planilha</li><li>Guia de uso e roteiro para Power BI</li><li>Análise por escrito do seu plano</li><li>Garantia de 7 dias: não gostou, devolvemos o valor</li></ul></div>
       <div style="display:flex;flex-direction:column;gap:12px;align-items:flex-start"><div class="pr">R$ 197 <small>pagamento único · em até 12x no cartão</small></div>
-        <a class="btn" href="https://pay.hotmart.com/T108610436D" rel="noopener">Quero agora</a></div>
+        <a class="btn" href="https://pay.hotmart.com/T108610436D" rel="noopener">Quero agora</a><a class="btn sec" href="/rotas/contador-4-0/">Começar pela rota · R$ 47</a></div>
     </div>
-    <p class="nota">Pagamento seguro pela Hotmart: Pix, boleto, cartão ou PayPal. O parcelamento tem juros da operadora.</p>
+    <p class="nota">Pagamento seguro pela Hotmart: Pix, boleto, cartão ou PayPal. O parcelamento tem juros da operadora.<br>Prefere outra plataforma? Pague pela <a href="https://pay.kiwify.com.br/xggtQav" rel="noopener" style="color:inherit">Kiwify</a> (cartão, Pix ou Apple Pay) ou pela <a href="https://chk.eduzz.com/40QRPRAJ9B" rel="noopener" style="color:inherit">Eduzz</a>. Mesmo produto e mesmo preço.</p>
   </section>
 
   <section>
     <span class="eyebrow">Dúvidas</span>
-    <details><summary>Substitui a contabilidade da empresa?</summary><p>Não. É uma ferramenta de gestão: não substitui a escrituração contábil nem a apuração oficial de impostos.</p></details><details><summary>Preciso de Power BI?</summary><p>Não. Tudo funciona no Excel ou Google Planilhas; o roteiro de Power BI é opcional.</p></details><details><summary>Como funciona a análise por escrito?</summary><p>Depois da compra, envie o plano preenchido para contato@grupoimperio.tec.br com o assunto &quot;Análise Completa&quot;. A resposta chega em até 48 horas úteis.</p></details><details><summary>E se eu não gostar?</summary><p>Você tem 7 dias de garantia: pede o reembolso direto na Hotmart.</p></details>
+    <details><summary>Substitui a contabilidade da empresa?</summary><p>Não. É uma ferramenta de gestão: não substitui a escrituração contábil nem a apuração oficial de impostos.</p></details><details><summary>Preciso de Power BI?</summary><p>Não. Tudo funciona no Excel ou Google Planilhas; o roteiro de Power BI é opcional.</p></details><details><summary>Como funciona a análise por escrito?</summary><p>Depois da compra, envie o plano preenchido para contato@grupoimperio.tec.br com o assunto &quot;Análise Completa&quot;. A resposta chega em até 48 horas úteis.</p></details><details><summary>E se eu não gostar?</summary><p>Você tem 7 dias de garantia: pede o reembolso direto na plataforma em que comprou.</p></details>
   </section>
 
   <footer><p>Rota 2027 · grupoimperio.tec.br</p>
   <p>Rota 2027 · grupoimperio.tec.br. Ferramenta de gestão; sem promessa de resultado.</p></footer>
-</div></body></html>
+</div><script>
+/* Origem da visita nos checkouts (Hotmart src/sck, Kiwify e Eduzz utm) */
+(function(){var q=new URLSearchParams(location.search);
+var us=q.get('utm_source')||(q.get('fbclid')?'facebook':'site'),um=q.get('utm_medium')||'',uc=q.get('utm_campaign')||'',ux=q.get('utm_content')||'';
+var src=(uc||us).slice(0,30),sck=[us,uc,ux].filter(Boolean).join('_').replace(/[^\w\-]/g,'').slice(0,60)||'site';
+function tag(a){try{var u=new URL(a.href),h=u.hostname;if(/pay\.hotmart\.com/.test(h)){u.searchParams.set('src',src);u.searchParams.set('sck',sck);}
+else if(/kiwify\.com|eduzz\.com/.test(h)){u.searchParams.set('utm_source',us);if(um)u.searchParams.set('utm_medium',um);if(uc)u.searchParams.set('utm_campaign',uc);if(ux)u.searchParams.set('utm_content',ux);if(/kiwify/.test(h)){u.searchParams.set('src',src);u.searchParams.set('sck',sck);}}
+else return;a.href=u.toString();}catch(e){}}
+function run(){document.querySelectorAll('a[href]').forEach(tag);}
+if(document.readyState!=='loading')run();else document.addEventListener('DOMContentLoaded',run);})();
+</script>
+</body></html>
